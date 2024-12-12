@@ -12,7 +12,7 @@ def gradient_descent(data, lr=0.0001, epochs=100000, tolerance=1e-6):
                 Y_matrix = Matrix([Y])
                 Y_pred_matrix = Matrix([Y_pred])
         
-                dm = 2 / n * X_matrix.multiplicar(Y_pred_matrix.resta(Y_matrix)).data
+                dm = 2 / n * X_matrix.multiply(Y_pred_matrix.resta(Y_matrix)).data
                 db = 2 / n * Y_pred_matrix.resta(Y_matrix).suma().data[0][0]
                 
                 m_prev, b_prev = m, b
