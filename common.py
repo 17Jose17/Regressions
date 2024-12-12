@@ -40,7 +40,7 @@ class Matrix:
         def transpose(self):
                 return Matrix([[self.data[j][i] for j in range(self.filas)] for i in range(self.columnas)])
     
-        def multiplicar(self, otra_matriz):
+        def multiply(self, otra_matriz):
                 if self.columnas != otra_matriz.filas:
                         raise ValueError("Las matrices no son multiplicables: el número de columnas de la primera debe ser igual al número de filas de la segunda.")
             
@@ -77,7 +77,7 @@ class Matrix:
             
             return det
 
-        def eliminar_gaussiana(self, b):
+        def gaussian_elimination(self, b):
             n = len(b)
             A = [row[:] for row in self.data]
             b = b[:]
@@ -98,6 +98,6 @@ class Matrix:
             
             return x
     
-        def mostrar(self):
+        def show(self):
                 for fila in self.data:
                         print(fila)
