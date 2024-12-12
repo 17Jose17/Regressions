@@ -1,4 +1,5 @@
 def gradient_descent(data, lr=0.0001, epochs=100000, tolerance=1e-6):
+        
         X, Y = data.to_matrix()
       
         m, b = 0, 0
