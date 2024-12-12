@@ -1,4 +1,5 @@
 def normal_equation(data):
+        
         X, Y = data.to_matrix(degree=1)
         
         X_transpose = Matrix(X).transpose().data
